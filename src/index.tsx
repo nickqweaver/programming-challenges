@@ -1,11 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+import { findInsertionPoint } from "./challenges/findInsertionPoint";
 
 ReactDOM.render(
   <React.StrictMode>
-    <div>Run yarn test</div>
+    <h1>
+      If you want to debug with the console you can call your function here:
+    </h1>
+    <>{findInsertionPoint([1, 2, 3, 4], 2)}</>
   </React.StrictMode>,
   document.getElementById("root")
 );
