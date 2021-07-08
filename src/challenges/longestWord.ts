@@ -9,6 +9,8 @@
  *   findLongestWord(" ") // Returns 0 as empty space is not considered a word
  * Look at the tests for further examples
  *
+ * ASSIGNED 07/09/2021, DUE 07/16/2021
+ *
  * @param str - the string to run the search on
  * @return - the length of the longest string
  */
