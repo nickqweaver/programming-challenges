@@ -8,7 +8,7 @@
 
 export function findInsertionPoint(arr: number[], num: number): number {
   arr.sort(compareFunction);
-  console.log(findInsertionPoint([40, 60], 50));
+  console.log(arr);
 }
 
 findInsertionPoint([40, 60], 50);
