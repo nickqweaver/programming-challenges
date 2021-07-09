@@ -10,7 +10,6 @@ export function findInsertionPoint(arr: number[], num: number): number {
 	const sortedArray = arr
 		.sort((a, b) => a - b)
 		.findIndex((number) => number > num);
-	console.log(num);
 	const findIndex = sortedArray === -1 ? arr.length : sortedArray;
 	return findIndex;
 }
