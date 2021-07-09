@@ -9,10 +9,17 @@
 export function findInsertionPoint(arr: number[], num: number): number {
   arr.sort(compareFunction);
   console.log(arr);
-}
 
-findInsertionPoint([40, 60], 50);
+  for (let index = 0; index < arr.length; index++) {
+    if (num < arr[index]) {
+      return index;
+    }
+  }
+  return arr.length++;
+}
 
 function compareFunction(a: number, b: number) {
   return a - b;
 }
+
+findInsertionPoint([40, 60], 50);
