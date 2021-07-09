@@ -8,7 +8,7 @@ ReactDOM.render(
     <h1>
       If you want to debug with the console you can call your function here:
     </h1>
-    <>{findLongestWord("what is the longest word?")}</>
+    <>{findLongestWord("what is the longest")}</>
   </React.StrictMode>,
   document.getElementById("root")
 );
