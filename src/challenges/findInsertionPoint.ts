@@ -7,7 +7,12 @@
  */
 
 export function findInsertionPoint(arr: number[], num: number): number {
-  return -1;
+  arr.sort(compareFunction);
+  console.log(findInsertionPoint([40, 60], 50));
 }
 
 findInsertionPoint([40, 60], 50);
+
+function compareFunction(a: number, b: number) {
+  return a - b;
+}
