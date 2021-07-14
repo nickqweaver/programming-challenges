@@ -16,7 +16,9 @@
  */
 
 export function findLongestWord(str: string): number {
-  return str.length;
+	const myString = str.sort;
+
+	return str.length;
 }
 
 findLongestWord("The quick brown fox jumped over the lazy dog"); // Should return 6 as "jumped" is the longest word in the array
