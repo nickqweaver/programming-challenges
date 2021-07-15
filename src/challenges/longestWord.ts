@@ -16,11 +16,12 @@
  */
 
 export function findLongestWord(str: string): number {
-	const myString = str.split(" ");
-	console.log(myString, "i am the string");
+	const cleanString = str.replace(/\.+$/, "");
+	console.log(cleanString);
 
-	const stringArray = myString.sort((a, b) => a.localeCompare(b));
-	console.log(stringArray);
+	// const myString = str.split(" ");
+	// console.log(myString, "i am the string");
+
 	return str.length;
 }
 
