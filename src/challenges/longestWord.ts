@@ -19,11 +19,9 @@ export function findLongestWord(str: string): number {
 	const cleanString = str
 		.replace(/\.+$/, "")
 		.split(" ")
-		.sort((a, b) => b.length - a.length)
-		.shift();
-	console.log(cleanString);
-	const longestWord = cleanString.length;
-	return longestWord;
+		.sort((a, b) => b.length - a.length);
+
+	return cleanString[0].length;
 }
 
 findLongestWord("The quick brown fox jumped over the lazy dog"); // Should return 6 as "jumped" is the longest word in the array
