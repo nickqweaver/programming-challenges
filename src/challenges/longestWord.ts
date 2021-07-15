@@ -19,7 +19,8 @@ export function findLongestWord(str: string): number {
 	const cleanString = str
 		.replace(/\.+$/, "")
 		.split(" ")
-		.sort((a, b) => b.length - a.length);
+		.sort((a, b) => b.length - a.length)
+		.shift();
 	console.log(cleanString);
 
 	return str.length;
