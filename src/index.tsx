@@ -1,27 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
-
 import { findLongestWord } from "./challenges/longestWord";
-
-export const App = () => {
-  const splitString =
-    "`This is mock text forPurposes of FindingTheLongestWord In the string,";
-  console.log(splitString);
-  findLongestWord(
-    "`This is mock text forPurposes of FindingTheLongestWord In the string,"
-  );
-  console.log(splitString);
-
-  return 5;
-};
 
 ReactDOM.render(
   <React.StrictMode>
     <h1>
       If you want to debug with the console you can call your function here:
     </h1>
-    <App />
+    <>{findLongestWord("what is the longest")}</>
   </React.StrictMode>,
   document.getElementById("root")
 );

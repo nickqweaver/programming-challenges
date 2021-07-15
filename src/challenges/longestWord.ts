@@ -16,7 +16,17 @@
  */
 
 export function findLongestWord(str: string): number {
-  return str.length;
+  let string = "The quick brown fox jumped over the lazy dog";
+  const arr = string.split(" ");
+  const characterCount = arr.map((newArr) => newArr.length);
+
+  // function getCharacters() {
+  //   console.log(getCharacters)
+  //   return getCharacters() =>   }
+  console.log(characterCount);
+  return characterCount.length;
+
+  // return findLongestWord("The quick brown fox jumped over the lazy dog"), 0;
 }
 
 findLongestWord("The quick brown fox jumped over the lazy dog"); // Should return 6 as "jumped" is the longest word in the array
