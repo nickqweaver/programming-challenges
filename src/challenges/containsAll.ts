@@ -14,7 +14,9 @@
 
 export function containsAll(arr: [string, string]): boolean {
 	const upperCaseArray = arr.map((a) => a.toUpperCase());
-	console.log(upperCaseArray);
+	for (let i = 0; i < upperCaseArray.length; i++) {
+		console.log(upperCaseArray[i]);
+	}
 	return false;
 }
 
