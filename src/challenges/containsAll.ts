@@ -14,14 +14,15 @@
 
 export function containsAll(arr: [string, string]): boolean {
 	const upperCaseArray = arr.map((a) => a.toUpperCase());
-
-	for (let i = 0; i < upperCaseArray[0].length; i++) {
-		// console.log(upperCaseArray[i][0], upperCaseArray[i][1]);
-		if (upperCaseArray[0][i] === upperCaseArray[1][i]) {
-			return false;
+	console.log(upperCaseArray[0]);
+	for (let i = 0; i < upperCaseArray[1].length; i++) {
+		if (upperCaseArray[0].includes(upperCaseArray[[1][i]])) {
+			console.log(upperCaseArray[[1][i]]);
+			return true;
 		}
 	}
-	return true;
+
+	return false;
 }
 
 // This one is tricky, ask questions if needed ;)
