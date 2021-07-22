@@ -13,7 +13,8 @@
  */
 
 export function containsAll(arr: [string, string]): boolean {
-  return false;
+	const upperCaseArray = arr.map((a) => a.toUpperCase());
+	return false;
 }
 
 // This one is tricky, ask questions if needed ;)
