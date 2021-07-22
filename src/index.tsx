@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
-import { findLongestWord } from "./challenges/longestWord";
+import { containsAll } from "./challenges/containsAll";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <h1>
-      If you want to debug with the console you can call your function here:
-    </h1>
-    <>{findLongestWord("what is the longest")}</>
-  </React.StrictMode>,
-  document.getElementById("root")
+	<React.StrictMode>
+		<h1>
+			If you want to debug with the console you can call your function here:
+		</h1>
+		<>{containsAll(["Hello", "hello"])}</>
+	</React.StrictMode>,
+	document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
