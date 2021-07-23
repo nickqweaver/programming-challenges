@@ -18,13 +18,13 @@ export function containsAll(arr: [string, string]): boolean {
 	const string2 = upperCaseArray[1];
 	console.log(upperCaseArray[0]);
 	for (let i = 0; i < string2.length; i++) {
-		if (string1.includes(string2[i])) {
-			console.log(string2[i]);
-			return true;
+		if (string1.indexOf(string2[i]) === -1) {
+			console.log(string2.length);
+			return false;
 		}
 	}
 
-	return false;
+	return true;
 }
 
 // This one is tricky, ask questions if needed ;)
