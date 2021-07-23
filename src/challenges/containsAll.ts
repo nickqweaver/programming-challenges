@@ -13,7 +13,37 @@
  */
 
 export function containsAll(arr: [string, string]): boolean {
-  return false;
+  const firstElementSplit = arr[0].split("");
+  firstElementSplit.sort();
+
+  const firstElToString = firstElementSplit.toLocaleString();
+  const newString = firstElToString.split(",").join("");
+  const lowerCaseString = newString.toLowerCase();
+  const newArr = Array.from(lowerCaseString);
+  newArr.sort();
+  console.log(newArr);
+
+  const secondElementSplit = arr[1].split("");
+  secondElementSplit.sort();
+  // console.log(secondElementSplit);
+
+  // const arrToString = arr.toLocaleString();
+  // function sortAlphabet(arr: [string, string]) {
+  //   return [...arr].sort().join("");
+  // }
+
+  // console.log(sortAlphabet(arr));
+
+  // const arrToString = arr.toLocaleString();
+  // const stringToLetters = arrToString.split(",");
+  // const mappedArr = stringToLetters.map(stringToLetters.shift);
+
+  // mappedArr.toString();
+  // console.log(arrToString);
+  // console.log(stringToLetters);
+  // console.log(mappedArr);
+  if (firstElementSplit === secondElementSplit) return false;
+  else return true;
 }
 
 // This one is tricky, ask questions if needed ;)
