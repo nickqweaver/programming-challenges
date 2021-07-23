@@ -12,38 +12,55 @@
  * @param arr -  an array of 2 strings
  */
 
+//does the first letter of second word exist in first word
+//does the second letter of second word exist in first word (continue thru each letter in first word)
+// if yes continue, if no return false
+
 export function containsAll(arr: [string, string]): boolean {
-  const firstElementSplit = arr[0].split("");
-  firstElementSplit.sort();
+  const secondString = arr[1].toLowerCase().split("");
+  const firstString = arr[0].toLowerCase().split("");
 
-  const firstElToString = firstElementSplit.toLocaleString();
-  const newString = firstElToString.split(",").join("");
-  const lowerCaseString = newString.toLowerCase();
-  const newArr = Array.from(lowerCaseString);
-  newArr.sort();
-  console.log(newArr);
+  const newArr = [];
 
-  const secondElementSplit = arr[1].split("");
-  secondElementSplit.sort();
-  // console.log(secondElementSplit);
+  let newArrWithoutDuplicates: string[] = [];
+  let secondStringWithoutDuplicates: string[] = [];
 
-  // const arrToString = arr.toLocaleString();
-  // function sortAlphabet(arr: [string, string]) {
-  //   return [...arr].sort().join("");
-  // }
+  for (let i = 0; i < secondString.length; i++) {
+    for (let j = 0; j < firstString.length; j++) {
+      if (firstString[j] === secondString[i]) newArr.push(secondString[i]);
+    }
+  }
 
-  // console.log(sortAlphabet(arr));
+  newArr.forEach((c) => {
+    if (!newArrWithoutDuplicates.includes(c)) {
+      newArrWithoutDuplicates.push(c);
+    }
+  });
+  secondString.forEach((c) => {
+    if (!secondStringWithoutDuplicates.includes(c)) {
+      secondStringWithoutDuplicates.push(c);
+    }
+  });
 
-  // const arrToString = arr.toLocaleString();
-  // const stringToLetters = arrToString.split(",");
-  // const mappedArr = stringToLetters.map(stringToLetters.shift);
-
-  // mappedArr.toString();
-  // console.log(arrToString);
-  // console.log(stringToLetters);
-  // console.log(mappedArr);
-  if (firstElementSplit === secondElementSplit) return false;
+  if (secondStringWithoutDuplicates.length !== newArrWithoutDuplicates.length)
+    return false;
   else return true;
+
+  // let chars = newArr;
+  // let uniqueChars: string[] = [];
+  // chars.forEach((c) => {
+  //   if (!uniqueChars.includes(c)) {
+  //     uniqueChars.push(c);
+  //   }
+  // });
+
+  // let chars2 = firstString;
+
+  // let uniqueChars2: string[] = [];
+
+  // // console.log(secondString);
+  // if (uniqueChars2 >= uniqueChars) return true;
+  // return false;
 }
 
 // This one is tricky, ask questions if needed ;)
