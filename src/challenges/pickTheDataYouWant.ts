@@ -33,9 +33,15 @@
  * @param numberOfItemsToGrab - The number of items to grab from the nth item
  */
 
+import { immutableNumberData } from "./pickTheDataYouWant.test";
+
 export const pickTheDataYouWant = <T>(
-  immutableData: T[][],
-  arrayToFill: T[],
-  nthItem: number,
-  numberOfItemsToGrab: number
-): void => {};
+	immutableData: T[][],
+	arrayToFill: T[],
+	nthItem: number,
+	numberOfItemsToGrab: number
+): void => {
+	for (let i = 0; i < immutableData.length; i++) {
+		nthItem = 2;
+	}
+};
