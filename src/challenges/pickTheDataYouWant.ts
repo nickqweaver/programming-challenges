@@ -36,12 +36,13 @@
 import { immutableNumberData } from "./pickTheDataYouWant.test";
 
 export const pickTheDataYouWant = <T>(
-	immutableData: T[][],
+	immutableNumberData: T[][],
 	arrayToFill: T[],
 	nthItem: number,
 	numberOfItemsToGrab: number
 ): void => {
-	for (let i = 0; i < immutableData.length; i++) {
-		nthItem = 2;
+	for (let nthItem = 2; nthItem < immutableNumberData.length; nthItem++) {
+		if (nthItem > 30) break;
+		console.log(immutableNumberData[nthItem]);
 	}
 };

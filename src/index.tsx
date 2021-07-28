@@ -8,15 +8,7 @@ ReactDOM.render(
 		<h1>
 			If you want to debug with the console you can call your function here:
 		</h1>
-		<>
-			{pickTheDataYouWant<number>([
-				[0, 1, 2],
-				[3, 4, 5],
-				[6, 7, 8, 9, 10],
-				[11, 12, 13, 14, 15],
-				[16, 17],
-			])}
-		</>
+		<>{pickTheDataYouWant}</>
 	</React.StrictMode>,
 	document.getElementById("root")
 );
