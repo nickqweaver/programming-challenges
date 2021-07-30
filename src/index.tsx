@@ -1,14 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
-import { findLongestWord } from "./challenges/longestWord";
+import { pickTheDataYouWant } from "./challenges/pickTheDataYouWant";
+
+const data = [[4], [5, 3, 5], [2, 3], [6, 5, 4, 8], [9, 10, 7]]; // example nthItem (2) would be [5, 3, 5] & [6, 5, 4, 8]
+const arr: number[] = []; //after pickTheDataYouWant gets called this array should equal [5,3,6,5]
+const numberOfItemsToGrab = 2;
+const nthItem = 2;
 
 ReactDOM.render(
   <React.StrictMode>
     <h1>
       If you want to debug with the console you can call your function here:
     </h1>
-    <>{findLongestWord("what is the longest")}</>
+    {pickTheDataYouWant(data, arr, nthItem, numberOfItemsToGrab)}
   </React.StrictMode>,
   document.getElementById("root")
 );

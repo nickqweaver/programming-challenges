@@ -31,11 +31,40 @@
  * @param arrayToFill - An array of type T that will have the specific items added to it
  * @param nthItem - Represents every nth item to be looked at in immutableData array
  * @param numberOfItemsToGrab - The number of items to grab from the nth item
+ *
+ *
  */
 
 export const pickTheDataYouWant = <T>(
   immutableData: T[][],
   arrayToFill: T[],
-  nthItem: number,
-  numberOfItemsToGrab: number
-): void => {};
+  nthItem: number, //this is not index based. first item would be at 0 index position
+  numberOfItemsToGrab: number // this is the number of items you are grabbing starting from the first item in the subArray (result of nthItem array)
+): void => {
+  const immutableNumberData = immutableData;
+  const numArrayToFill = arrayToFill;
+  const nthItems = nthItem;
+  const itemsToGrab =
+    nthItems === 0
+      ? []
+      : Math.floor(immutableData.length / nthItem) * numberOfItemsToGrab;
+
+  for (let i = 0; i < arrayToFill.length; i = i + nthItem) {
+    arrayToFill.push(numArrayToFill[i]);
+  }
+
+  console.log(immutableNumberData, numArrayToFill, nthItems, itemsToGrab);
+};
+// const arr = immutableData.map((copy) => copy);
+// console.log(arr);
+
+// const itemsToGrab = Math.floor(immutableData.length / nthItem);
+
+// console.log(nthItem + "testing");
+// console.log(itemsToGrab);
+
+// const newArr = [];
+// for (let i = 0; i < arr.length; i = i + arr.length) {
+//   newArr.push(arr[i]);
+// }
+// console.log(newArr);
