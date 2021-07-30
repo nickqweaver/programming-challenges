@@ -42,18 +42,18 @@ export const pickTheDataYouWant = <T>(
   numberOfItemsToGrab: number // this is the number of items you are grabbing starting from the first item in the subArray (result of nthItem array)
 ): void => {
   const immutableNumberData = immutableData;
-  const numArrayToFill = arrayToFill;
+  let numArrayToFill = arrayToFill;
   const nthItems = nthItem;
   const itemsToGrab =
     nthItems === 0
       ? []
       : Math.floor(immutableData.length / nthItem) * numberOfItemsToGrab;
 
-  for (let i = 0; i < arrayToFill.length; i = i + nthItem) {
-    arrayToFill.push(numArrayToFill[i]);
-  }
+  // console.log(itemsToGrab);
+  // console.log(nthItems);
 
-  console.log(immutableNumberData, numArrayToFill, nthItems, itemsToGrab);
+  numArrayToFill = immutableNumberData.map((arr) => arr[nthItems]);
+  console.log(numArrayToFill);
 };
 // const arr = immutableData.map((copy) => copy);
 // console.log(arr);
