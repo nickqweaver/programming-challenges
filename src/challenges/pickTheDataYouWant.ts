@@ -41,13 +41,15 @@ export const pickTheDataYouWant = <T>(
 	nthItem: number,
 	numberOfItemsToGrab: number
 ): void => {
-	for (let i = nthItem; i < immutableNumberData.length; i++) {
-		// console.log(immutableNumberData[nthItem]);
-
-		for (let k = numberOfItemsToGrab; k < immutableNumberData.length; k++) {
-			if (k > 30) {
-				break;
-			}
+	if (nthItem === 0) {
+		return;
+	}
+	for (let i = nthItem - 1; i < immutableNumberData.length; i += nthItem) {
+		const subArray =
+			numberOfItemsToGrab > immutableNumberData[i].length
+				? immutableNumberData[i].length
+				: numberOfItemsToGrab;
+		for (let k = 0; k < subArray; k++) {
 			arrayToFill.push(immutableNumberData[i][k]);
 			console.log(immutableNumberData[i][k]);
 		}
