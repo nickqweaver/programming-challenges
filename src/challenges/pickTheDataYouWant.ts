@@ -41,14 +41,24 @@ export const pickTheDataYouWant = <T>(
 	nthItem: number,
 	numberOfItemsToGrab: number
 ): void => {
+	// conditional: need to check if nthItem === 0 and if so we will early return so as to not loop for no reason
 	if (nthItem === 0) {
 		return;
 	}
+	// i is = nthitem - 1 because we aren't wanting to start the iteration at nthItem but the index prior so if nthItem = 1
+	// we start the iteration at index 0
+	//
+	// i += nthItem, if we were to say i + nthItem we would never move, if nthItem were 1 again based on current value of i, i would then be 0 and adding 1 back to i
+	// i = 1 - 1 and i would be placed back at 0
 	for (let i = nthItem - 1; i < immutableNumberData.length; i += nthItem) {
+		// conditional: if immutableData[i] only contains 2 items but the number of items to grab is 3 it will grab those 2 item plus undefined
+		// so we create a new variable to check if the numberofitemstograb is greater than the length of the array and if so just return the length of that array
+		// giving us the only the 2 items the were available
 		const subArray =
 			numberOfItemsToGrab > immutableNumberData[i].length
 				? immutableNumberData[i].length
 				: numberOfItemsToGrab;
+		// then instead of comparing k to the length of immutableData[i] we compare it to the subArray variable which will then compare k against either the array length or numberofitemstograb
 		for (let k = 0; k < subArray; k++) {
 			arrayToFill.push(immutableNumberData[i][k]);
 			console.log(immutableNumberData[i][k]);
