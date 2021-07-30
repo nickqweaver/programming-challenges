@@ -41,30 +41,14 @@ export const pickTheDataYouWant = <T>(
   nthItem: number, //this is not index based. first item would be at 0 index position
   numberOfItemsToGrab: number // this is the number of items you are grabbing starting from the first item in the subArray (result of nthItem array)
 ): void => {
-  const immutableNumberData = immutableData;
-  let numArrayToFill = arrayToFill;
-  const nthItems = nthItem;
-  const itemsToGrab =
-    nthItems === 0
-      ? []
-      : Math.floor(immutableData.length / nthItem) * numberOfItemsToGrab;
-
-  // console.log(itemsToGrab);
-  // console.log(nthItems);
-
-  numArrayToFill = immutableNumberData.map((arr) => arr[nthItems]);
-  console.log(numArrayToFill);
+  if (nthItem === 0) return;
+  // starting at nth item and skipping to every nth item
+  for (let i = nthItem - 1; i < immutableData.length; i = i + nthItem) {
+    // starting at 0 index of subarray and iterating until numberOfItemsToGrab
+    for (let j = 0; j < numberOfItemsToGrab; j++) {
+      // because number of items to grab can exceed subarray we only want to push items in if j is less than subarray length
+      if (j < immutableData[i].length) arrayToFill.push(immutableData[i][j]);
+    }
+    console.log(arrayToFill);
+  }
 };
-// const arr = immutableData.map((copy) => copy);
-// console.log(arr);
-
-// const itemsToGrab = Math.floor(immutableData.length / nthItem);
-
-// console.log(nthItem + "testing");
-// console.log(itemsToGrab);
-
-// const newArr = [];
-// for (let i = 0; i < arr.length; i = i + arr.length) {
-//   newArr.push(arr[i]);
-// }
-// console.log(newArr);
