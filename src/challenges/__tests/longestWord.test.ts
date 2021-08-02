@@ -1,4 +1,4 @@
-import { findLongestWord } from "./longestWord";
+import { findLongestWord } from "../longestWord";
 
 const reallyLongWordThatMakesNoSense =
   "aaabbbcccdddeeefffggghhhiiijjjkkklllmmmnnnooopppqqqrrrssstttuuuvvvwwwxxxyyyzzz";

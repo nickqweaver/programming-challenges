@@ -1,4 +1,4 @@
-import { largestOfFour } from "./largestNumber";
+import { largestOfFour } from "../largestNumber";
 
 test("Correct numbers #1", () => {
   expect(

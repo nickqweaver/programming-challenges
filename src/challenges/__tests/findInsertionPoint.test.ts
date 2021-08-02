@@ -1,4 +1,4 @@
-import { findInsertionPoint } from "./findInsertionPoint";
+import { findInsertionPoint } from "../findInsertionPoint";
 import "jest-matcher-one-of"; // Using ES6 w/ Babel or TypeScript
 
 test("It returns the correct index", () => {

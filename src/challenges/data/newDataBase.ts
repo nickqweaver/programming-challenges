@@ -1,0 +1,51 @@
+export const newDataBase = [
+  {
+    id: 1,
+    firstName: "Jim",
+    lastName: "Buck",
+    age: 29,
+    friendIDs: [2, 6],
+  },
+  {
+    id: 2,
+    firstName: "Bobby",
+    lastName: "Reynolds",
+    age: 44,
+    friendIDs: [1, 3],
+  },
+  {
+    id: 3,
+    firstName: "Doug",
+    lastName: "Towell",
+    age: 44,
+    friendIDs: [2, 4, 1],
+  },
+  {
+    id: 4,
+    firstName: "Blart",
+    lastName: "Zuck",
+    age: 89,
+    friendIDs: [2, 3],
+  },
+  {
+    id: 5,
+    firstName: "Bald",
+    lastName: "Schnief",
+    age: 23,
+    friendIDs: [1, 4],
+  },
+  {
+    id: 6,
+    firstName: "Ricky",
+    lastName: "Jay",
+    age: 62,
+    friendIDs: [],
+  },
+  {
+    id: 7,
+    firstName: "Jim",
+    lastName: "Dell",
+    age: 90,
+    friendIDs: [5],
+  },
+];

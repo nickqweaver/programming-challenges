@@ -1,4 +1,4 @@
-import { pickTheDataYouWant } from "./pickTheDataYouWant";
+import { pickTheDataYouWant } from "../pickTheDataYouWant";
 
 let numArrayToFill: number[];
 let immutableNumberData: number[][] = [

@@ -1,4 +1,4 @@
-import { containsAll } from "./containsAll";
+import { containsAll } from "../containsAll";
 
 test("It does not care about casing", () => {
   expect(containsAll(["Hello", "hello"])).toBe(true);
