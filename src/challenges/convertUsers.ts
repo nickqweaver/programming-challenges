@@ -19,5 +19,12 @@ export const convertUsers = (users: OldUserType[]): NewUserType[] => {
 			age: 0,
 			friendIDs: 0,
 		};
+		const shapeData = Object.create(newUser);
+		shapeData.id = users.id;
+		shapeData.firstName = users.first;
+		shapeData.lastName = users.last;
+		shapeData.age = users.age;
+		shapeData.friendIDs = users.id;
 	};
+	console.log(updateDate);
 };
