@@ -10,4 +10,14 @@
  */
 import { level3DB, OldUserType, NewUserType } from "./data/level3DataBase"; // level3DB is the data base you can use to perform lookups to find the friend ID's based on their names
 
-export const convertUsers = (users: OldUserType[]): NewUserType[] => {};
+export const convertUsers = (users: OldUserType[]): NewUserType[] => {
+	const updateDate = (users: OldUserType) => {
+		const newUser = {
+			id: 0,
+			firstName: "",
+			lastName: "",
+			age: 0,
+			friendIDs: 0,
+		};
+	};
+};
